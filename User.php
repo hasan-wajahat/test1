@@ -3,7 +3,7 @@
 include_once("./DBLib.php");
 
 class User{
-    var $db;
+    private $db;
 
     function __construct(){
         $DB = new DBClass();
@@ -16,7 +16,7 @@ class User{
         return $result;
     }
 
-    function getTeamByID($id){
+    function getTeamByUserID($id){
         $myQuery = "SELECT team_id FROM teams_users WHERE user_id = $id";
         $result = $this->db->query($myQuery);
         return $result;
