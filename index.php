@@ -51,5 +51,8 @@
             </tbody>
         </table>
     </div>
+    <footer>
+        Made by Hasan Wajahat
+    </footer>
 </body>
 </html>
