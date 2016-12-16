@@ -11,7 +11,13 @@ class User{
     }
 
     function getAllUsers(){
-        $myQuery =  "Select * from users";
+        $myQuery =  "SELECT * FROM users";
+        $result = $this->db->query($myQuery);
+        return $result;
+    }
+
+    function getTeamByID($id){
+        $myQuery = "SELECT team_id FROM teams_users WHERE user_id = $id";
         $result = $this->db->query($myQuery);
         return $result;
     }
